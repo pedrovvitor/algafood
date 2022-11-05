@@ -1,5 +1,6 @@
 package com.algaworks.algafood.domain.model;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -9,8 +10,10 @@ import lombok.Data;
 @Entity
 @Data
 public class Kitchen {
+
   @Id
-  @GeneratedValue(strategy = GenerationType.AUTO)
+  @GeneratedValue(strategy = GenerationType.IDENTITY)
   private Long id;
+  @Column(nullable = false)
   private String name;
 }
